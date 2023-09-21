@@ -126,7 +126,7 @@ public class BoardController {
   @GetMapping("/list")
   public String list(SearchCondition sc,Model m, HttpServletRequest request) {
     if (!loginCheck(request))
-      return "redirect:/login?toURL=" + request.getRequestURL();  // ·Î±×ÀÎÀ» ¾ÈÇßÀ¸¸é ·Î±×ÀÎ È­¸éÀ¸·Î ÀÌµ¿
+      return "redirect:/login?toURL=" + request.getRequestURL();  // ë¡œê·¸ì¸ì„ ì•ˆí–ˆìœ¼ë©´ ë¡œê·¸ì¸ í™”ë©´ìœ¼ë¡œ ì´ë™
 
     try {
       System.out.println("sc = " + sc);
@@ -146,7 +146,7 @@ public class BoardController {
       e.printStackTrace();
     }
 
-    return "boardList"; // ·Î±×ÀÎÀ» ÇÑ »óÅÂÀÌ¸é, °Ô½ÃÆÇ È­¸éÀ¸·Î ÀÌµ¿
+    return "boardList"; // ë¡œê·¸ì¸ì„ í•œ ìƒíƒœì´ë©´, ê²Œì‹œíŒ í™”ë©´ìœ¼ë¡œ ì´ë™
   }
 
   private boolean loginCheck(HttpServletRequest request) {
