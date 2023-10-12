@@ -12,8 +12,6 @@
 	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy"></property>
 		<property name="url" value="jdbc:log4jdbc:mysql://54.180.29.115:3306/leaf?useUnicode=true&amp;characterEncoding=utf8"></property>
-<!--		<property name="driverClassName" value="com.mysql.jdbc.Driver"></property>-->
-<!--		<property name="url" value="jdbc:mysql://localhost:3306/leaf?useUnicode=true&amp;characterEncoding=utf8"></property>-->
 		<property name="username" value="koels"></property>
 		<property name="password" value="6507"></property>
 	</bean>
