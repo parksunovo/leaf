@@ -10,19 +10,19 @@
 
   <delete id="delete" parameterType="map">
     DELETE
-    FROM USER_INFO
+    FROM user_info
     WHERE id = #{id}
     AND pwd = #{pwd}
   </delete>
 
   <insert id="insert" parameterType="UserDto">
-    INSERT INTO USER_INFO
+    INSERT INTO user_info
         (id,pwd,name,email,phone)
     VALUES (#{id},#{pwd},#{name},#{email},#{phone})
   </insert>
 
   <update id="update" parameterType="UserDto">
-    UPDATE USER_INFO
+    UPDATE user_info
     SET pwd = #{pwd}
         , name = #{name}
         , email = #{email}
@@ -37,6 +37,6 @@
   </select>
     <sql id="selectFromUser">
       SELECT id,pwd,name,email,phone
-      FROM USER_INFO
+      FROM user_info
     </sql>
 </mapper>
