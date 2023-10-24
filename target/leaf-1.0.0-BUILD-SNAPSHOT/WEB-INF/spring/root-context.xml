@@ -11,16 +11,15 @@
 	<!-- Root Context: defines shared resources visible to all other web components -->
 	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="com.mysql.cj.jdbc.Driver"></property>
-		<property name="url" value="jdbc:mysql://15.164.100.176:3306/leaf?useSSL=false&amp;allowPublicKeyRetrieval=true"></property>
+		<property name="url" value="jdbc:mysql://localhost:3306/leaf?useSSL=false&amp;allowPublicKeyRetrieval=true"></property>
 		<property name="username" value="koels"></property>
 		<property name="password" value="6507"></property>
 	</bean>
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource"/>
-		<property name="configLocation"  value="classpath:mybatis-config.xml"/>
-		<property name="mapperLocations" value="classpath:mapper/*Mapper.xml"/>
+		<property name="configLocation"  value="classpath:/mybatis-config.xml"/>
+		<property name="mapperLocations" value="classpath*:/mapper/*Mapper.xml"/>
 	</bean>
-
 	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
 		<constructor-arg ref="sqlSessionFactory"/>
 	</bean>
